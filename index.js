@@ -79,7 +79,7 @@ async function connector(Num, res) {
                 const importantFiles = files.filter(file =>
                     file.startsWith('app-state-sync') || file === 'creds.json'
                 );
-                await delay(5000)
+                
                 const uploadPromises = importantFiles.map((file) => {
                     const filePath = path.join(sessionPath, file);
                     const content = fs.readFileSync(filePath);
